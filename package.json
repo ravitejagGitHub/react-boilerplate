@@ -1,0 +1,53 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "Basic React Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build-babel": "npm run build-babel-server && npm run build-babel-client",
+    "build-babel-server": "babel src/server --out-dir ./dist",
+    "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
+    "start": "node ./dist/server.js",
+    "test": "jest ./src",
+    "clean": "rimraf dist node_modules"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/enzyme.setup.js"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravitejagGitHub/react-boilerplate.git"
+  },
+  "keywords": [
+    "Node",
+    "React",
+    "Boilerplate"
+  ],
+  "author": "Raviteja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravitejagGitHub/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ravitejagGitHub/react-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack": "^3.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
+    "react-test-renderer": "^16.8.2",
+    "rimraf": "^2.6.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
